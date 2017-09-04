@@ -1,2 +1,2 @@
 # my-first-unity-project
-My first unity project
+Virtual reality by applying GVR library.
