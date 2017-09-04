@@ -15,7 +15,7 @@ public class FrogMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		bool isOnGround = Physics.Raycast (transform.position, -transform.up, jumpGroundClearance);
-		Debug.DrawRay (transform.position, -transform.up * jumpGroundClearance, Color.yellow);
+		//Debug.DrawRay (transform.position, -transform.up * jumpGroundClearance, Color.yellow);
 		var speed = GetComponent<Rigidbody> ().velocity.magnitude;
 		bool isNearStationary = speed < jumpSpeedTolerance;
 		if (GvrViewer.Instance.Triggered && isOnGround && isNearStationary) {
