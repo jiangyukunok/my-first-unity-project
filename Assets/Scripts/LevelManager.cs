@@ -10,4 +10,10 @@ public class LevelManager : MonoBehaviour {
 		print(currentIndex);
 		SceneManager.LoadScene(currentIndex + 1);
 	}
+
+	public void Quit()
+	{
+		print("Game will quit.");
+		Application.Quit();
+	}
 }
