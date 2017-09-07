@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FrogMovement : MonoBehaviour {
 	public float jumpElevationInDegrees = 45;
-	public float jumpSpeedInMPS = 5;
+	public float jumpSpeedInCMPS = 5;
 	public float jumpSpeedTolerance = 5;
 	public float jumpGroundClearance = 2;
 
@@ -25,7 +25,7 @@ public class FrogMovement : MonoBehaviour {
 			//Debug.DrawRay (transform.position, projectLookDirection, Color.blue);
 			var radianToRotate = Mathf.Deg2Rad * jumpElevationInDegrees;
 			var unnormalizedJumpDirection = Vector3.RotateTowards (projectLookDirection, Vector3.up, radianToRotate, 0);
-			var jumpVector = unnormalizedJumpDirection.normalized * jumpSpeedInMPS;
+			var jumpVector = unnormalizedJumpDirection.normalized * jumpSpeedInCMPS;
 			//Debug.DrawRay (transform.position, jumpVector, Color.green);
 			GetComponent<Rigidbody> ().AddForce (jumpVector, ForceMode.VelocityChange);
 		}
