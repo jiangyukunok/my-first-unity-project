@@ -9,7 +9,7 @@ public class VehicleMovement : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		GetComponent<Rigidbody> ().MovePosition (transform.position + Vector3.left * velocity * Time.deltaTime);
+		GetComponent<Rigidbody> ().MovePosition (transform.position - transform.right * velocity * Time.deltaTime);
 		//transform.Translate (-velocity * Time.deltaTime, 0, 0);
 	}
 }
