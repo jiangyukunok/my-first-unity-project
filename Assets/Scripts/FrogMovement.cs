@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class FrogMovement : MonoBehaviour {
-	public float jumpElevationInDegrees = 45;
-	public float[] jumpSpeedInCMPS = {200, 225, 250};
+	float jumpElevationInDegrees = 45;
+	float[] jumpSpeedInCMPS = {300, 400, 0};
 	//public float jumpSpeedTolerance = 5;
 	//public float jumpGroundClearance = 250;
 
